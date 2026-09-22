@@ -24,7 +24,7 @@ const bootstrap = () => {
   );
 
   return app.listen(port, 512, () => {
-    console.log(`server is running in port ${port}`);
+    console.log(`server is running in Port ${port}`);
   });
 };
 export default bootstrap;
