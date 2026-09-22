@@ -1,0 +1,78 @@
+/* Container & Layout */
+.blog-card-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.75rem;
+  box-sizing: border-box;
+}
+
+/* Individual Card Styling */
+.blog-card-container article {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  align-items: center;
+  text-align: center;
+}
+
+.blog-card-container article:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  border-color: #cbd5e1;
+}
+
+/* Card Heading */
+.blog-card-container article h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+/* Card Content Paragraph */
+.blog-card-container article p {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+  /* Truncates text to 3 lines with ellipsis */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Author Meta Footer */
+.blog-card-container article span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #2563eb;
+  padding-top: 0.75rem;
+  border-top: 1px solid #f1f5f9;
+  display: inline-block;
+  width: 100%;
+}
+
+/* Error State Message */
+p.error {
+  text-align: center;
+  color: #dc2626;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: 2rem auto;
+  font-weight: 500;
+}

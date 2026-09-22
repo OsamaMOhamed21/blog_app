@@ -1,0 +1,88 @@
+*{
+  padding: 0%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e9ecef;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+
+}
+
+/* Flexbox Layout Bar */
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 10vh;
+}
+
+/* Brand Link (Far Left) */
+.navbar-brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2563eb;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  transition: opacity 0.2s ease;
+  margin-right: 2rem;
+}
+
+.navbar-brand:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+/* Navigation Group (Far Right) */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Individual Links */
+.nav-link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #6c757d;
+  text-decoration: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #1a1d20;
+  background-color: #f8f9fa;
+  text-decoration: none;
+}
+
+/* Styled Login Button / Link */
+.nav-link-login {
+  color: #2563eb;
+  background-color: #eff6ff;
+  font-weight: 600;
+  padding: 0.45rem 1rem;
+  border-radius: 8px;
+}
+
+.nav-link-login:hover {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+@media (max-width: 700px) {
+  .navbar-container { height: auto; min-height: 10vh; flex-direction: column; gap: .65rem; padding: .85rem 1rem; }
+  .navbar-brand { margin-right: 0; }
+  .navbar-links { gap: .3rem; }
+}
